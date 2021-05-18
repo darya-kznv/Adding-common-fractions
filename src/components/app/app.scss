@@ -1,0 +1,57 @@
+.fractions-app {
+    padding: 2rem 0;
+
+    &__button {
+        margin-top: 1rem;
+    }
+
+    &__lists {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+.fractions-list {
+    display: flex;
+
+    &__item {
+        position: relative;
+        margin-right: 30px;
+
+        &::before {
+            position: absolute;
+            left: calc(100% + 6px);
+            top: 50%;
+
+            font-size: 1.5rem;
+            font-weight: normal;
+            color: #394E66;
+            content: '+';
+
+            transform: translateY(-50%);
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            &::before {
+                display: none;
+                content: none;
+            }
+        }
+    }
+}
+
+.fraction-result {
+    display: flex;
+    align-items: center;
+
+    &__equal {
+        padding-left: 0.875rem;
+        padding-right: 0.875rem;
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: #394E66;
+    }
+}

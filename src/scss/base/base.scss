@@ -1,0 +1,132 @@
+html,
+body { height : 100%; }
+
+html {
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing : border-box;
+}
+
+body {
+    margin: 0;
+
+    font-size: 1rem;
+    font-family: system;
+    line-height: 1.2;
+    color: #222222;
+
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 991px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    &__title {
+        margin-top: 0;
+
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    &__descr {
+        margin-bottom: 2rem;
+
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
+input {
+    ::-webkit-input-placeholder {
+        font-weight: 400;
+        font-size: 0.875rem;
+
+        color: #A3B3C6;
+    }
+
+    ::-moz-placeholder {
+        font-weight: 400;
+        font-size: 0.875rem;
+
+        color: #A3B3C6;
+    }
+
+    :-moz-placeholder {
+        font-weight: 400;
+        font-size: 0.875rem;
+
+        color: #A3B3C6;
+    }
+
+    :-ms-input-placeholder {
+        font-weight: 400;
+        font-size: 0.875rem;
+
+        color: #A3B3C6;
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 6px 15px;
+
+    font-size: 0.875rem;
+    line-height: 1;
+    font-weight: normal;
+
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    user-select: none;
+    touch-action: manipulation;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+
+    transition: all 0.2s ease;
+
+    &:active,
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+
+    &[disabled="disabled"] {
+        pointer-events: none;
+        background-color: #ced1d7;
+    }
+
+    &--blue {
+        background-color: #3763F5;
+        color: #fff;
+
+        &:hover {
+            background-color: #5F82F7;
+            color: #fff;
+        }
+
+        &:active {
+            background-color: #224BD6;
+            color: #fff;
+
+        }
+
+        &[disabled="disabled"] {
+            background-color: #ced1d7;
+        }
+    }
+}

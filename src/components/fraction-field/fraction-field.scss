@@ -1,0 +1,58 @@
+.fraction-field {
+    &__inner {
+        display: inline-flex;
+    }
+
+    &__input {
+        padding: 8px 5px;
+        width: 40px;
+
+        font-size: 0.875rem;
+        font-weight: normal;
+        line-height: normal;
+        text-align: center;
+
+        border-radius: 4px;
+        border: 1px solid #EAEDF3;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        color: #394E66;
+        outline: none;
+
+        transition: all 0.2s ease;
+
+        &:focus,
+        &:active {
+            border: 1px solid #3763F5;
+            box-shadow: 0 0 3px rgba(55, 99, 245, 0.22);
+            outline: none;
+        }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover {
+            transition: background-color 5000s ease-in-out 0s;
+            -webkit-box-shadow: 0 0 0px 1000px white inset;
+            -webkit-text-fill-color: black;
+        }
+
+        :-webkit-autofill:focus,
+        :-webkit-autofill:active {
+            transition: background-color 5000s ease-in-out 0s;
+            -webkit-box-shadow: 0 0 0px 1000px white inset,
+            0 0 0 0.2rem rgba(41, 98, 255, 0.25);
+            -webkit-text-fill-color: black;
+        }
+
+        &--filled {
+            border-color: #ced1d7;
+        }
+
+        &--error {
+            border-color: #f37070;
+
+            &:active,
+            &:focus {
+                border-color: #f37070;
+            }
+        }
+    }
+}
