@@ -1,4 +1,4 @@
-# vue2-webpack4
+# Сalculating sum of common fractions
 
 npm i
 
