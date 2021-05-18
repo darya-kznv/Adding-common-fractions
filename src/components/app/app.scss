@@ -5,10 +5,20 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+
+        @media screen and (max-width: 35.94em) {
+            justify-content: center;
+        }
     }
 
     &__result {
         margin-bottom: 1rem;
+    }
+
+    &__button {
+        @media screen and (max-width: 35.94em) {
+            width: 100%;
+        }
     }
 }
 
