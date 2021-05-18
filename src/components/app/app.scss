@@ -1,23 +1,25 @@
 .fractions-app {
     padding: 2rem 0;
 
-    &__button {
-        margin-top: 1rem;
-    }
-
     &__lists {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
     }
+
+    &__result {
+        margin-bottom: 1rem;
+    }
 }
 
 .fractions-list {
     display: flex;
+    flex-wrap: wrap;
 
     &__item {
         position: relative;
-        margin-right: 30px;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
 
         &::before {
             position: absolute;

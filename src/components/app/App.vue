@@ -24,7 +24,7 @@
 					</span>
 					</fraction>
 				</div>
-				<div class="fraction-app__result fraction-result">
+				<div class="fractions-app__result fraction-result">
 					<span class="fraction-result__equal">=</span>
 					{{ getResultAddFractions }}
 				</div>
