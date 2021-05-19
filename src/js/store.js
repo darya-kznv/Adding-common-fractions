@@ -21,16 +21,6 @@ export const store = new Vuex.Store({
         fractionsCount(state) {
             return state.listFractions.length;
         },
-        calcSumFractions(state) {
-            let sum = 0;
-            let checkCorrectFraction = state.listFractions.filter(item => item.dividend != null && item.divisor != null)
-
-            checkCorrectFraction.forEach((item, index) => {
-                sum += item.dividend / item.divisor;
-            });
-
-            return sum.toFixed(3);
-        },
     },
     mutations: {
         addFraction(state, newFraction) {

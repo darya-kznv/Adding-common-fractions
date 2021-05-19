@@ -56,7 +56,14 @@ export default {
 			return this.$store.state.listFractions;
 		},
 		getResultAddFractions() {
-			return this.$store.getters.calcSumFractions;
+			let sum = 0;
+			let checkCorrectFraction = this.listFractions.filter(item => item.dividend != null && item.divisor != null)
+
+			checkCorrectFraction.forEach((item, index) => {
+				sum += item.dividend / item.divisor;
+			});
+
+			return sum.toFixed(3);
 		}
 	},
 	methods: {
