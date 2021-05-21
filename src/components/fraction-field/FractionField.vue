@@ -1,10 +1,10 @@
 <template>
 	<div class="fraction-field">
 		<input
-			v-model="fractionValue"
 			type="text"
 			class="fraction-field__input"
 			@input="changeValueFraction"
+			v-model="setFractionValue"
 			:class="[
 				{ 'fraction-field__input--filled': fractionValue },
 				{ 'fraction-field__input--error': isFractionError },
@@ -30,6 +30,14 @@ export default {
 		},
 		isFractionError() {
 			return !this.isFractionValid && this.fractionValue
+		},
+		setFractionValue: {
+			get() {
+				return this.$store.state.listFractions[this.keyFraction][this.typeFraction]
+			},
+			set(val) {
+				this.fractionValue = val
+			}
 		}
 	},
 	methods: {

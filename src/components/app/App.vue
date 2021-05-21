@@ -9,13 +9,14 @@
 				<div class="fractions-list">
 					<fraction
 						v-for="(itemFraction, index) in listFractions"
+						:key="index"
 						:key-fraction="index"
 						class="fractions-list__item"
 					>
 						<span
 							class="fraction__close"
-							v-if="index >= 2"
-							@click="deleteFraction"
+							v-if="listFractions.length > 2"
+							@click="deleteFraction(index)"
 						>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="9px">
 							<path d="M2,8 L8,2" class="p1"/>
@@ -46,7 +47,9 @@ import Fraction from '../fraction/Fraction.vue'
 export default {
 	name: 'App',
 	data() {
-		return {}
+		return {
+
+		}
 	},
 	components: {
 		Fraction
@@ -75,8 +78,11 @@ export default {
 				});
 			}
 		},
-		deleteFraction() {
-			this.$store.commit('deleteFraction');
+		deleteFraction(index) {
+			// this.$store.commit('deleteFraction');
+			this.$store.commit('deleteFraction', {
+				key: index
+			});
 		}
 	}
 }

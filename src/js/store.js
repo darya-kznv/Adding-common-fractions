@@ -18,9 +18,9 @@ export const store = new Vuex.Store({
     },
     actions: {},
     getters: {
-        fractionsCount(state) {
-            return state.listFractions.length;
-        },
+        // fractionsCount(state) {
+        //     return state.listFractions.length;
+        // },
     },
     mutations: {
         addFraction(state, newFraction) {
@@ -30,7 +30,8 @@ export const store = new Vuex.Store({
             state.listFractions[value.index][value.type] = value.data
         },
         deleteFraction(state, fraction) {
-            state.listFractions.pop();
+            // state.listFractions.pop();
+            state.listFractions.splice(fraction.key, 1)
         }
     }
 });
